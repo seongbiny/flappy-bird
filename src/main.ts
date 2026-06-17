@@ -7,7 +7,8 @@ if (!container) {
   throw new Error('App container not found');
 }
 
-const game = new FlappyBirdGame();
-
-await game.init(container);
-game.start();
+(async () => {
+  const game = new FlappyBirdGame();
+  await game.init(container);
+  game.start();
+})();
